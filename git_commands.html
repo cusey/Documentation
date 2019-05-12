@@ -2,70 +2,48 @@
 <html>
 
 <head>
-        <style>
-            code {
-                margin:10px;
-                background-color: LightGray;
-                padding: 10px;
-            }
-
-        </style>
+    <link rel="stylesheet" type="text/css" href="common.css">
 </head>
 
 <body>
 
     <h1>Git-Specific Commands</h1>
 
-    <br>
+    <h3>Initial Git Repository</h3>
     <p>Since Git was designed with a big project like Linux in mind, there are a lot of Git commands. However, to use the
     basics of Git, you’ll only need to know a few terms. They all begin the same way, with the word “git.”</p>
-    <code>
-    git init
-    </code>
+    <div class="code-div">
+        <code>git init</code>
+    </div>
+    
 
-    <br>
-    <p><b>Clone:</b>  Clone is a git command line utility used to target an existing repository and create a clone, or copy of
+    <h3>Clone</h3>
+    <p> Clone is a git command line utility used to target an existing repository and create a clone, or copy of
     the target repository.You clone a repository with git clone <url>. For example, if you want to clone the Git linkable
     library called libgit2, you can do so like this:</p>
-    <code>
-    $ git clone https://github.com/libgit2/libgit2
-    </code>
+    <div class="code-div">
+        <code>$ git clone https://github.com/libgit2</code>
+    </div>
+    
 
     <br>
     <p>Create a working copy of a local repository:</p>
-    <code>
-    git clone username@host:/path/to/repository
-    </code>
+    <div class="code-div">
+        <code>git clone username@host:/path/to/repository</code>
+    </div>
+    
 
-    <br>
-    <p><b>git config:</b>Short for “configure,” this is most useful when you’re setting up Git for the first time. The first
+    <h3>git config</h3>
+    <p>Short for “configure,” this is most useful when you’re setting up Git for the first time. The first
     thing you should do when you install Git is to set your user name and email address. This is important because every
     Git commit uses this information, and it’s immutably baked into the commits you start creating:</p>
-    <code>
-    $ git config --global user.name "John Doe"
-    $ git config --global user.email johndoe@example.com
-    </code>
+    <div class="code-div">
+        <code>$ git config --global user.name "John Doe"</code>
+    </div>
+    <div class="code-div">
+        <code> git config --global user.email johndoe@example.com</code>
+    </div>
 
-    <br>
-    <p>If you want to check your configuration settings, you can use the git config --list command to list all the settings
-    Git can find at that point:</p>
-    <code>
-    $ git config --list
-    user.name=John Doe
-    user.email=johndoe@example.com
-    color.status=auto
-    color.branch=auto
-    color.interactive=auto
-    color.diff=auto
-    </code>
-
-    <br>
-    <p></p>
-    <code></code>
-
-    <br>
-    <p></p>
-    <code></code>
 
     <br>
     <br>

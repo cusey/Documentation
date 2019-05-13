@@ -2,9 +2,21 @@
 <html>
 <body>
 
-<h1>Docker Home</h1>
-
-<p>My first paragraph.</p>
+    <h1 id="docker-terminology">Docker terminology</h1>
+    
+    <h2 id="container-image-">Container image:</h2>
+    <p>A package with all the dependencies and information needed to create a container. An image includes all the dependencies (such as frameworks) plus deployment and execution configuration to be used by a container runtime. Usually, an image derives from multiple base images that are layers stacked on top of each other to form the container&#39;s filesystem. An image is immutable once it has been created.</p>
+    <h2 id="dockerfile-">Dockerfile:</h2>
+    <p>A text file that contains instructions for how to build a Docker image. It&#39;s like a batch script, the first line states the base image, to begin with, and then follow the instructions to install required programs, copy files and so on, until you get the working environment you need.</p>
+    <h2 id="build-">Build:</h2>
+    <p>The action of building a container image based on the information and context provided by its Dockerfile, plus additional files in the folder where the image is built. You can build images with the Docker docker build command.</p>
+    <h2 id="container-">Container:</h2>
+    <p>An instance of a Docker image. A container represents the execution of a single application, process, or service. It consists of the contents of a Docker image, an execution environment, and a standard set of instructions. When scaling a service, you create multiple instances of a container from the same image. Or a batch job can create multiple containers from the same image, passing different parameters to each instance.</p>
+    <h2 id="volumes-">Volumes:</h2>
+    <p>Offer a writable filesystem that the container can use. Since images are read-only but most programs need to write to the filesystem, volumes add a writable layer, on top of the container image, so the programs have access to a writable filesystem. The program doesn&#39;t know it is accessing a layered filesystem, it is just the filesystem as usual. Volumes live in the host system and are managed by Docker.</p>
+    <h2 id="tag-">Tag:</h2>
+    <p>A mark or label you can apply to images so that different images or versions of the same image (depending on the version number or the target environment) can be identified.</p>
+    
 
 
 <br>

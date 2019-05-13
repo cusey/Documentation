@@ -7,43 +7,140 @@
 
 <body>
 
-    <h1>Git-Specific Commands</h1>
+        <h1>Git-Specific Commands</h1>
 
-    <h3>Initial Git Repository</h3>
-    <p>Since Git was designed with a big project like Linux in mind, there are a lot of Git commands. However, to use the
-    basics of Git, you’ll only need to know a few terms. They all begin the same way, with the word “git.”</p>
-    <div class="code-div">
-        <code>git init</code>
-    </div>
-    
+        <p>Since Git was designed with a big project like Linux in mind, there are a lot of Git commands. However, to use the basics of Git, you’ll only need to know a few terms. They all begin the same way, with the word “git.”  </p>
+        
+        <p><strong>git init</strong>: Initializes a new Git repository. Until you run this command inside a repository or directory, it’s just a regular folder. Only after you input this does it accept further Git commands.  </p>
+        
+        <pre><code>git init
+        </code></pre>
+        
+        <p><strong>git clone</strong>: Clone is a git command line utility used to target an existing repository and create a clone, or copy of the target repository.You clone a repository with git clone <url>. For example, if you want to clone the Git linkable library called libgit2, you can do so like this:</p>
+        
+        <pre><code>$ git clone https://github.com/libgit2/libgit2
+        </code></pre>
 
-    <h3>Clone</h3>
-    <p> Clone is a git command line utility used to target an existing repository and create a clone, or copy of
-    the target repository.You clone a repository with git clone <url>. For example, if you want to clone the Git linkable
-    library called libgit2, you can do so like this:</p>
-    <div class="code-div">
-        <code>$ git clone https://github.com/libgit2</code>
-    </div>
-    
-
-    <br>
-    <p>Create a working copy of a local repository:</p>
-    <div class="code-div">
-        <code>git clone username@host:/path/to/repository</code>
-    </div>
-    
-
-    <h3>git config</h3>
-    <p>Short for “configure,” this is most useful when you’re setting up Git for the first time. The first
-    thing you should do when you install Git is to set your user name and email address. This is important because every
-    Git commit uses this information, and it’s immutably baked into the commits you start creating:</p>
-    <div class="code-div">
-        <code>$ git config --global user.name "John Doe"</code>
-    </div>
-    <div class="code-div">
-        <code> git config --global user.email johndoe@example.com</code>
-    </div>
-
+        <p>That creates a directory named libgit2, initializes a .git directory inside it, pulls down all the data for that repository, and checks out a working copy of the latest version. If you go into the new libgit2 directory that was just created, you’ll see the project files in there, ready to be worked on or used.</p>
+        
+        <p>Create a working copy of a local repository:     </p>
+        
+        <pre><code>git clone /path/to/repository
+        </code></pre>
+        
+        <p>For a remote server, use:  </p>
+        
+        <pre><code>git clone username@host:/path/to/repository
+        </code></pre>
+        
+        <p><strong>git config</strong>: Short for “configure,” this is most useful when you’re setting up Git for the first time. The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:</p>
+        
+        <pre><code>$ git config --global user.name "John Doe"
+        $ git config --global user.email johndoe@example.com
+        </code></pre>
+        
+        <p>If you want to check your configuration settings, you can use the git config --list command to list all the settings Git can find at that point:</p>
+        
+        <pre><code>$ git config --list
+        user.name=John Doe
+        user.email=johndoe@example.com
+        color.status=auto
+        color.branch=auto
+        color.interactive=auto
+        color.diff=auto
+        </code></pre>
+        
+        <p><strong>git help</strong>: Forgot a command? Type this into the command line to bring up the 21 most common git commands. You can also be more specific and type “git help init” or another term to figure out how to use and configure a specific git command. If you ever need help while using Git, there are two equivalent ways to get the comprehensive manual page (manpage) help for any of the Git commands:</p>
+        
+        <pre><code>$ git help &lt;verb&gt;
+        $ man git-&lt;verb&gt;
+        </code></pre>
+        
+        <p>For example, you can get the manpage help for the git config command by running</p>
+        
+        <pre><code>$ git help config
+        </code></pre>
+        
+        <p><strong>git status</strong>: Check the status of your repository. See which files are inside it, which changes still need to be committed, and which branch of the repository you’re currently working on.  </p>
+        
+        <pre><code>git status
+        </code></pre>
+        
+        <p><strong>git add</strong>: This does not add new files to your repository. Instead, it brings new files to Git’s attention. After you add files, they’re included in Git’s “snapshots” of the repository.   </p>
+        
+        <pre><code>git status
+        </code></pre>
+        
+        <p><strong>git commit</strong>: Git’s most important command. After you make any sort of change, you input this in order to take a “snapshot” of the repository. Usually it goes git commit -m “Message here.” The -m indicates that the following section of the command should be read as a message.   </p>
+        
+        <pre><code>git commit -m "Your message about the commit"
+        </code></pre>
+        
+        <p>Commit any files you've added with git add, and also commit any files you've changed since then:</p>
+        
+        <pre><code>git commit -a
+        </code></pre>
+        
+        <p><strong>git branch</strong>: List all the branches in your repo, and also tell you what branch you're currently in:</p>
+        
+        <pre><code>git branch
+        </code></pre>
+        
+        <p><strong>git checkout</strong>: Literally allows you to “check out” a repository that you are not currently inside. This is a navigational command that lets you move to the repository you want to check. Create a new branch and switch to it:</p>
+        
+        <pre><code>git checkout -b &lt;branchname&gt;
+        </code></pre>
+        
+        <p>Switch from one branch to another:  </p>
+        
+        <pre><code>git checkout &lt;branchname&gt;
+        </code></pre>
+        
+        <p><strong>git merge</strong>:To merge a different branch into your active branch: </p>
+        
+        <pre><code>git merge &lt;branchname&gt;
+        </code></pre>
+        
+        <p><strong>git push</strong>: If you’re working on your local computer, and want your commits to be visible online on GitHub as well, you “push” the changes up to GitHub with this command. Send changes to the master branch of your remote repository:    </p>
+        
+        <pre><code>git push origin master
+        </code></pre>
+        
+        <p>Delete a branch on your remote repository:</p>
+        
+        <pre><code>git push origin :&lt;branchname&gt;
+        </code></pre>
+        
+        <p>Push all branches to your remote repository:</p>
+        
+        <pre><code>git push --all origin
+        </code></pre>
+        
+        <p><strong>git pull</strong>: If you’re working on your local computer and want the most up-to-date version of your repository to work with, you “pull” the changes down from GitHub with this command. Fetch and merge changes on the remote server to your working directory:   </p>
+        
+        <pre><code>git pull
+        </code></pre>
+        
+        <p><strong>git tag</strong>: You can use tagging to mark a significant changeset, such as a release:</p>
+        
+        <pre><code>git tag 1.0.0 &lt;commitID&gt;
+        </code></pre>
+        
+        <p><strong>git log</strong>: CommitId is the leading characters of the changeset ID, up to 10, but must be unique. Get the ID using:</p>
+        
+        <pre><code>git log
+        </code></pre>
+        
+        <p><strong>git diff</strong>: View all the merge conflicts.
+        View the conflicts against the base file:</p>
+        
+        <pre><code>git diff --base &lt;filename&gt;
+        </code></pre>
+        
+        <p>Preview changes, before merging:</p>
+        
+        <pre><code>git diff &lt;sourcebranch&gt; &lt;targetbranch&gt;
+        </code></pre>
 
     <br>
     <br>

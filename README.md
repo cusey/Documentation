@@ -37,7 +37,7 @@ Then you have to select the branch when the index page is saved.
 <img 
 src="https://github.com/cusey/ImageForWiki/blob/master/getting-started/select_branch.PNG" 
 alt="Apache Spark" 
-height="200px"/>
+height="250px"/>
 
 You will see the page is created.          
 

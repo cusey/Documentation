@@ -27,25 +27,25 @@ This project is licensed under the MIT License
 
 ## Create Website
 
-First you got to go repository setting.
+First you got to go repository setting.     
 <img 
 src="https://github.com/cusey/ImageForWiki/blob/master/getting-started/setting.png" 
 alt="Apache Spark" 
-height="150px"/>
+height="200px"/>
 
-Then you have to select the branch when the index page is saved.
+Then you have to select the branch when the index page is saved.        
 <img 
 src="https://github.com/cusey/ImageForWiki/blob/master/getting-started/select_branch.PNG" 
 alt="Apache Spark" 
-height="150px"/>
+height="200px"/>
 
-You will see the page is created.
+You will see the page is created.          
 
 <img 
 src="https://github.com/cusey/ImageForWiki/blob/master/getting-started/link_created.PNG" 
 alt="Apache Spark" 
-height="150px"/> 
+height="200px"/> 
 
-You must put the webpage in the repository. Most commonly the page is saved as index.html.
+You must put the webpage in the repository. Most commonly the page is saved as index.html.     
 
 
